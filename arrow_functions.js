@@ -42,3 +42,28 @@ body.addEventListener('click', function() {
     this.classList.toggle('hi');
   }, 1000)
 })
+
+
+// WHEN not to use arrow functions:
+// - WHEN we need to use `this`
+
+// - WHEN we need a method to bind to an object
+const person = {
+  points: 0,
+  score: () => {
+    this.points++;
+  }
+}
+
+person.score();
+console.log(person);
+// still going to be 0 because again `this` is not bind
+// to the right scope, if we want to use `this` we can use 
+// regular function
+
+// WHEN we need to add a prototype method
+// again if we want to use `this`
+
+// WHEN we need arguments object
+// if we use () => {} we will not get the js arguments
+// object, so need to use regular function()
