@@ -34,6 +34,7 @@ const body = document.querySelector('body');
 // here if we would use => function, this would be bound to window
 body.addEventListener('click', function() {
   this.classList.toggle('hello');
+  // here with a timeout we can use an arrow function so this
   // will be the parent, if we would use another function
   // this would be window because that function is not bound
   // to anything 
