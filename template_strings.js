@@ -35,4 +35,6 @@ const markup =
   </ul>`;
 
 
-
+// it's a good idea to sanitize the data
+// before adding it to html
+// we can use the DOMPurify library for that
