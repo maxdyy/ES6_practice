@@ -10,7 +10,7 @@ name.startsWith('m'); // returns true
 flightNum.startsWith('0', 2) // returns true
 
 // .endsWith() is quite similar
-name.endsWith('m') // returns true
+name.endsWith('x') // returns true
 
 // we can use the second argument to set
 // the num of characters to check on
