@@ -63,3 +63,24 @@ let currentCar = 'BMW 320';
 let newCar = 'Mercedes C 350';
 
 [currentCar, newCar] = [newCar, currentCar];
+
+// we can destructor the result of a function right away
+function convertCurrency(amount) {
+  const converted = {
+    EUR: amount * 0.9,
+    GBP: amount * 0.83,
+    CAD: amount * 1.4,
+  }
+
+  return converted;
+};
+
+const { EUR, GBP, CAD } = convertCurrency(100);
+
+// we can destructor function arguments if an object 
+// is being passed in
+function taxCalc({ price, tax = 0.1 }) {
+  return price + (price * tax);
+}
+
+const total = taxCalc({price: 550, tax: "0.13"})
