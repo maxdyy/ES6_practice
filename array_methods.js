@@ -34,3 +34,57 @@ function summAll() {
 const things = Array.of("map", 3, ["hello", 9], "phone");
 
 // things -> ["map", 3, ["hello", 9], "phone"]
+
+// Arrays now haw .find() method
+
+const posts = [
+  {
+    code: "a",
+    title: "Post a",
+    text: "Text a"
+  },
+  {
+    code: "b",
+    title: "Post b",
+    text: "Text b"
+  }
+];
+
+// the find method takes a function that returns true or false
+
+const post = posts.find(post => {
+  if (post.code === "b") {
+    return true;
+  } else {
+    return false;
+  }
+});
+
+// More succinct way to write it
+
+const code = "b"
+const post = posts.find(post => post.code === code);
+
+// We also have a .findIndex(), which is also a new method
+
+const postIndex = posts.findIndex(post => post.code === code);
+
+// This will give us the index of the post with code "b"
+
+// There are other methods that are not in ES6 but are not 
+// commonly used: .some() and .every()
+
+const ages = [32, 1, 99, 10, 18, 21, 55];
+
+// Is there at least one adult?
+
+const adultPresent = ages.some(age => age >= 18);
+
+// adultPresent is true
+
+// Is everybody is old enough to drink?
+
+const allOldEnough = ages.every(age => age >= 18);
+
+// allOlderEnough is false
+
