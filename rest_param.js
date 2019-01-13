@@ -17,6 +17,6 @@ convertCurrency(0.8, 100, 23, 9, 53);
 
 const garage = ["Max", "New York", "BMW 330", "Mercedes C220", "Honda Civic"];
 
-const [name, id, ...cars];
+const [name, id, ...cars] = garage;
 
 // name = Max; id = New York; cars = ["BMW 330", "Mercedes C220", "Honda Civic"];
