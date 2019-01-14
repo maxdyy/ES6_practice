@@ -101,16 +101,21 @@ const users = fetch("https://jsonplaceholder.typicode.com/users");
 Promise
   .all([posts, users])
   .then(responses => {
-    const [posts, users] = responses;
-    const formattedPosts = posts.json();
-    const formattedUsers = users.json();
+    // Destructuring our data
+    const [fetchedData1, fetchedData2] = responses;
+    
+    const formattedData1 = fetchedData1.json();
+    const formattedData2 = fetchedData2.json();
 
-    formattedPosts
+    formattedData1
       .then(data => console.log(data))
       .catch(error => console.log(error));
 
-    formattedUsers
+    formattedData2
       .then(data => console.log(data))
       .catch(error => console.log(error));
   });
+
+// This way we have managed to get data from two sources
+// in the same on promise
 
